@@ -1,29 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { TextInput, View, Text } from 'react-native';
 
-class Input extends Component {
-  state = { text: '' }
-  // const { containerStyle, labelStyle, inputStyle } = styles;
-  // const { buttonStyle, textStyle } = styles;
-
-  render() {
-    return (
-      <View>
-        <View style={styles.containerStyle}>
-          <Text style={styles.labelStyle}>{this.props.label}</Text>
-          <TextInput
-            placeholder={this.props.placeholder}
-            style={styles.inputStyle}
-            value={this.state.text}
-            onChangeText={text => {
-              this.setState({ text });
-            }}
-          />
-        </View>
+const Input = (props) => {
+  return (
+    <View>
+      <View style={styles.containerStyle}>
+        <Text style={styles.labelStyle}>{props.label}</Text>
+        <TextInput
+          placeholder={props.placeholder}
+          value={props.text}
+          style={styles.inputStyle}
+          onChangeText={props.onChangeText}
+        />
       </View>
-    );
-  }
-}
+    </View>
+  );
+};
 
 const styles = {
   containerStyle: {

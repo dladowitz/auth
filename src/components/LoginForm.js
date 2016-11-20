@@ -6,11 +6,18 @@ class LoginForm extends Component {
   state = { text: '' }
 
   render() {
+    console.log('State', this.state);
+
     return (
       <View>
         <Card>
           <CardSection>
-            <Input label={'Email'} placeholder={'abourdain@gmail.com'}/>
+            <Input
+              value={this.state.text}
+              label={'Email'}
+              placeholder={'abourdain@gmail.com'}
+              onChangeText={(text) => this.setState({ text })}
+            />
           </CardSection>
 
           <CardSection />
