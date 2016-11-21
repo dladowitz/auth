@@ -9,7 +9,7 @@ const Input = (props) => {
         secureTextEntry={props.secureTextEntry}
         autoCorrect={false}
         placeholder={props.placeholder}
-        value={props.text}
+        value={props.value}
         style={styles.inputStyle}
         onChangeText={props.onChangeText}
       />
