@@ -17,7 +17,6 @@ class LoginForm extends Component {
   }
 
   onLoginSuccess() {
-    // console.log(response);
     this.setState({
       loading: false,
       error: '',
@@ -87,15 +86,7 @@ const styles = {
     fontSize: 20,
     alignSelf: 'center',
     padding: 10,
-
   },
-  successStyle: {
-    color: 'green',
-    fontSize: 20,
-    alignSelf: 'center',
-    padding: 10,
-
-  }
 };
 
 export default LoginForm;
